@@ -1,3 +1,21 @@
 .header {
-    
+    background-color: #AC3741;
+    font-family: 'Open Sans', sans-serif;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.header h1 {
+    text-align: left;
+    color: #F9DEC9;
+    grid-column: 1/2;
+    margin: 0;
+}
+
+.header p {
+    text-align: right;
+    color: #F9DEC9;
+    grid-column: 3/4;
+    vertical-align: middle;
 }
