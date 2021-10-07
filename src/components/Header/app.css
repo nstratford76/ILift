@@ -17,5 +17,5 @@
     text-align: right;
     color: #F9DEC9;
     grid-column: 3/4;
-    vertical-align: middle;
+    padding: auto 0;
 }
