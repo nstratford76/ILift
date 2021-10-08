@@ -13,29 +13,44 @@ class Workout extends React.Component {
   render() {
     return (
       <div className="workout">
-        <table class="ui celled table">
+        <table className="ui celled table myStyle">
           <thead>
             <tr>
               <th>{this.getWorkout()}</th>
-              <th>Age</th>
-              <th>Job</th>
+              <th>Reps</th>
+              <th>Weight</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td data-label="Name">James</td>
-              <td data-label="Age">24</td>
-              <td data-label="Job">Engineer</td>
+              <td data-label="Name">
+                <input type="checkbox" value="Benchpress" />
+                BenchPress
+              </td>
+              <td data-label="Reps">
+                <input type="text" defaultValue="30" />
+              </td>
+              <td data-label="Weight"><input type="text" defaultValue="100" /></td>
             </tr>
             <tr>
-              <td data-label="Name">Jill</td>
-              <td data-label="Age">26</td>
-              <td data-label="Job">Engineer</td>
+              <td data-label="Name">
+                <input type="checkbox" value="Benchpress" />
+                BenchPress
+              </td>
+              <td data-label="Reps">
+                <input type="text" defaultValue="30" />
+              </td>
+              <td data-label="Weight"><input type="text" defaultValue="100" /></td>
             </tr>
             <tr>
-              <td data-label="Name">Elyse</td>
-              <td data-label="Age">24</td>
-              <td data-label="Job">Designer</td>
+              <td data-label="Name">
+                <input type="checkbox" value="Benchpress" />
+                BenchPress
+              </td>
+              <td data-label="Reps">
+                <input type="text" defaultValue="30" />
+              </td>
+              <td data-label="Weight"><input type="text" defaultValue="100" /></td>
             </tr>
           </tbody>
         </table>

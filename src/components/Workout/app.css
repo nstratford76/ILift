@@ -1,3 +1,15 @@
 .workout {
-    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.myStyle {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ui.table {
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
 }
