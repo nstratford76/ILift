@@ -55,6 +55,8 @@ class Workout extends React.Component {
           <thead>
             <tr>
               <th>Workout</th>
+              <th>Reps</th>
+              <th>Weight</th>
               <th>Video Link</th>
             </tr>
           </thead>
