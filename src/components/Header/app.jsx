@@ -7,7 +7,7 @@ class Header extends React.Component {
     constructor() {
         super();
         var today = new Date(),
-        date = (today.getMonth() + 1) + '|' + today.getDate() + '|' + today.getFullYear();
+        date = (today.getMonth() + 1) + ' • ' + today.getDate() + ' • ' + today.getFullYear();
        
         this.state = {
           currentDate: date
@@ -18,7 +18,7 @@ class Header extends React.Component {
         return (
             <div className="header">
                 <h1>cardinal</h1>
-                <p> {this.state.currentDate} </p>
+                <p>{this.state.currentDate}</p>
             </div>
         )
     }
