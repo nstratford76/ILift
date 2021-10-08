@@ -18,7 +18,7 @@ class Header extends React.Component {
         return (
             <div className="header">
                 <h1>cardinal</h1>
-                <p> {this.state.currentDate} </p>
+                <p>{this.state.currentDate}</p>
             </div>
         )
     }
