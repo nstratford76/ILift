@@ -4,26 +4,26 @@ import WorkoutModel from "../WorkoutModel/app";
 
 
 const workoutA = [
-  { id: 1, name: "Incline Bench", url: "https://www.youtube.com/watch?v=SrqOu55lrYU&t=19s" },
-  { id: 2, name: "SA DB Bench", url: "https://www.youtube.com/watch?v=td-4lC0tXKA" },
-  { id: 3, name: "Incline DB curls", url: "https://www.youtube.com/watch?v=MVSccftvAQw" },
-  { id: 4, name: "SA Rope Hammer Curls", url: "https://www.youtube.com/watch?v=RB7LtfxDB8E" },
-  { id: 5, name: "DB Bent Over Flyes", url: "https://www.youtube.com/watch?v=ttvfGg9d76c" }
+  { id: 1, name: "Incline Bench", url: "https://www.youtube.com/embed/SrqOu55lrYU" },
+  { id: 2, name: "SA DB Bench", url: "https://www.youtube.com/embed/td-4lC0tXKA" },
+  { id: 3, name: "Incline DB curls", url: "https://www.youtube.com/embed/MVSccftvAQw" },
+  { id: 4, name: "SA Rope Hammer Curls", url: "https://www.youtube.com/embed/RB7LtfxDB8E" },
+  { id: 5, name: "DB Bent Over Flyes", url: "https://www.youtube.com/embed/ttvfGg9d76c" }
 ];
 
 const workoutB = [
   { id: 1, name: "Bulgarian Split Squats (per leg)", url: "https://www.youtube.com/watch?v=EC-8WL5y3GY" },
-  { id: 2, name: "Romanian Deadlifts", url: "https://www.youtube.com/watch?v=JCXUYuzwNrM" },
-  { id: 3, name: "Leg Extensions", url: "https://www.youtube.com/watch?v=YyvSfVjQeL0" },
-  { id: 4, name: "Hanging Weighted Knee Raises", url: "https://www.youtube.com/watch?v=cAM1Tm9w8F4" }
+  { id: 2, name: "Romanian Deadlifts", url: "https://www.youtube.com/embed/EC-8WL5y3GY" },
+  { id: 3, name: "Leg Extensions", url: "https://www.youtube.com/embed/YyvSfVjQeL0" },
+  { id: 4, name: "Hanging Weighted Knee Raises", url: "https://www.youtube.com/embed/cAM1Tm9w8F4" }
 ];
 
 const workoutC = [
-  { id: 1, name: "Standing Barbell Press", url: "https://www.youtube.com/watch?v=2yjwXTZQDDI" },
-  { id: 2, name: "Weighted Chin-ups", url: "https://www.youtube.com/watch?v=9aA0-FbxK9E" },
-  { id: 3, name: "SA Seated Cable Rows", url: "https://www.youtube.com/watch?v=CrylzZHfO1c" },
-  { id: 4, name: "SA Tricep Rope Push-down", url: "https://www.youtube.com/watch?v=Zl46Cxc4DDs" },
-  { id: 5, name: "DB Lateral Raises", url: "https://www.youtube.com/watch?v=3VcKaXpzqRo" }
+  { id: 1, name: "Standing Barbell Press", url: "https://www.youtube.com/embed/2yjwXTZQDDI" },
+  { id: 2, name: "Weighted Chin-ups", url: "https://www.youtube.com/embed/9aA0-FbxK9E" },
+  { id: 3, name: "SA Seated Cable Rows", url: "https://www.youtube.com/embed/CrylzZHfO1c" },
+  { id: 4, name: "SA Tricep Rope Push-down", url: "https://www.youtube.com/embed/Zl46Cxc4DDs" },
+  { id: 5, name: "DB Lateral Raises", url: "https://www.youtube.com/embed/3VcKaXpzqRo" }
 ];
 
 class Workout extends React.Component {

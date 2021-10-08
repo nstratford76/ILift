@@ -5,8 +5,8 @@ function WorkoutModel(props) {
     return (
         <tbody>
             <tr>
-                <td> <input type="checkbox" name = {props.name}/> {props.name} </td>
-                <td> <a href={props.url} target = "_blank">Video Link</a></td>
+                <td>{props.name}</td>
+                <td> <iframe src={props.url}>Video Link</iframe></td>
             </tr>
         </tbody>
     );
