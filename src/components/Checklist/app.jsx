@@ -11,7 +11,7 @@ class Checklist extends React.Component {
 
   render() {
     return (
-      <div className="checklist">
+      /*<div className="checklist">
         <div
           className="ui three item menu"
         >
@@ -25,8 +25,8 @@ class Checklist extends React.Component {
             Workout C
           </a>
         </div>
-      </div>
-       /* <div className="checklist">
+      </div>*/
+        <div className="checklist">
          <select
           name="dropdown"
           defaultValue={this.state.selectValue}
@@ -38,7 +38,7 @@ class Checklist extends React.Component {
           <option value="Workout C">Workout C</option>
         </select> 
         <Workout current={this.state.selectValue} />
-      </div> */
+      </div> 
     );
   }
 }
