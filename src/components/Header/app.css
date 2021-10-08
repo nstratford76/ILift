@@ -17,5 +17,7 @@
     text-align: right;
     color: #F9DEC9;
     grid-column: 3/4;
-    padding: auto 0;
+    padding: 0;
+    height: 36px;
+    line-height: 36px; /* set the line height to the height to vertically align content*/
 }
