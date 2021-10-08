@@ -1,3 +1,21 @@
 .workout {
     font-family: 'Open Sans', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.myStyle {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ui.table {
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+}
+.workout span {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #333;
 }
