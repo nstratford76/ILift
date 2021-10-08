@@ -4,7 +4,7 @@ import WorkoutModel from "../WorkoutModel/app";
 
 
 const workoutA = [
-  { id: 1, name: "Incline Bench", url: "https://www.youtube.com/watch?v=SrqOu55lrYU&t=19s" },
+  { id: 1, name: "Incline Bench", url: "https://www.youtube.com/embed/SrqOu55lrYU" },
   { id: 2, name: "SA DB Bench", url: "https://www.youtube.com/watch?v=td-4lC0tXKA" },
   { id: 3, name: "Incline DB curls", url: "https://www.youtube.com/watch?v=MVSccftvAQw" },
   { id: 4, name: "SA Rope Hammer Curls", url: "https://www.youtube.com/watch?v=RB7LtfxDB8E" },

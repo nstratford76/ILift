@@ -6,7 +6,7 @@ function WorkoutModel(props) {
         <tbody>
             <tr>
                 <td>{props.name}</td>
-                <td> <a href={props.url} target = "_blank">Video Link</a></td>
+                <td> <iframe src={props.url}>Video Link</iframe></td>
             </tr>
         </tbody>
     );

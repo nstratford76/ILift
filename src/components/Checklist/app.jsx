@@ -14,8 +14,6 @@ class Checklist extends React.Component {
       <div className="checklist">
         <div
           className="ui three item menu"
-          defaultValue={this.state.selectValue}
-          onChange={this.handleChange}
         >
           <a className="item active" value="Workout A">
             Workout A
@@ -27,7 +25,9 @@ class Checklist extends React.Component {
             Workout C
           </a>
         </div>
-        {/* <select
+      </div>
+       /* <div className="checklist">
+         <select
           name="dropdown"
           defaultValue={this.state.selectValue}
           id="dropdown"
@@ -36,9 +36,9 @@ class Checklist extends React.Component {
           <option value="Workout A">Workout A</option>
           <option value="Workout B">Workout B</option>
           <option value="Workout C">Workout C</option>
-        </select> */}
+        </select> 
         <Workout current={this.state.selectValue} />
-      </div>
+      </div> */
     );
   }
 }
