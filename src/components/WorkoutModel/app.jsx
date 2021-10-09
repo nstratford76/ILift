@@ -6,8 +6,8 @@ function WorkoutModel(props) {
         <tbody>
             <tr>
                 <td>{props.name}</td>
-                <td> <input type="text" />Reps </td>
-                <td> <input type="text" />Weight </td>
+                <td> Set 1: <input type="text" /> Set 2: <input type="text" /> Set 3: <input type="text" /> </td>
+                <td> Set 1: <input type="text" /> Set 2: <input type="text" /> Set 3: <input type="text" /> </td>
                 <td> <iframe src={props.url}>Video Link</iframe></td>
             </tr>
         </tbody>
