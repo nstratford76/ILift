@@ -46,10 +46,38 @@ const workoutA = [
 ];
 
 const workoutB = [
-  { id: 1, name: "Bulgarian Split Squats", set1Reps:"6-8", set2Reps:"6-8", set3Reps:"6-8", url: "https://www.youtube.com/embed/2C-uNgKwPLE" },
-  { id: 2, name: "Romanian Deadlifts", set1Reps:"6-8", set2Reps:"6-8", set3Reps:"6-8",url: "https://www.youtube.com/embed/EC-8WL5y3GY" },
-  { id: 3, name: "Leg Extensions", set1Reps:"10-12", set2Reps:"10-12", set3Reps:"10-12",url: "https://www.youtube.com/embed/YyvSfVjQeL0" },
-  { id: 4, name: "Hanging Weighted Knee Raises", set1Reps:"8-15", set2Reps:"8-15", set3Reps:"8-15",url: "https://www.youtube.com/embed/cAM1Tm9w8F4" }
+  {
+    id: 1,
+    name: "Bulgarian Split Squats",
+    set1Reps: "6-8",
+    set2Reps: "6-8",
+    set3Reps: "6-8",
+    url: "https://www.youtube.com/embed/2C-uNgKwPLE",
+  },
+  {
+    id: 2,
+    name: "Romanian Deadlifts",
+    set1Reps: "6-8",
+    set2Reps: "6-8",
+    set3Reps: "6-8",
+    url: "https://www.youtube.com/embed/EC-8WL5y3GY",
+  },
+  {
+    id: 3,
+    name: "Leg Extensions",
+    set1Reps: "10-12",
+    set2Reps: "10-12",
+    set3Reps: "10-12",
+    url: "https://www.youtube.com/embed/YyvSfVjQeL0",
+  },
+  {
+    id: 4,
+    name: "Hanging Weighted Knee Raises",
+    set1Reps: "8-15",
+    set2Reps: "8-15",
+    set3Reps: "8-15",
+    url: "https://www.youtube.com/embed/cAM1Tm9w8F4",
+  },
 ];
 
 const workoutC = [
@@ -131,21 +159,37 @@ class Workout extends React.Component {
           <p>SA = Single Arm</p>
           <p>DB = Dumbell</p>
           <p>BW = Body Weight</p>
-
         </div>
         <div>
-          <table class="ui celled table">
+          <table className="ui celled table">
             <thead>
               <tr>
                 <th>Movement</th>
                 <th>Sets</th>
                 <th>Weight</th>
-                <th>Example Video</th>
               </tr>
             </thead>
-            {workouts.map(w => <WorkoutModel key={w.id} set1Reps={w.set1Reps} set2Reps={w.set2Reps} set3Reps={w.set3Reps} name={w.name} url={w.url} />)}
+            {workouts.map((w) => (
+              <WorkoutModel
+                key={w.id}
+                changeUrl={this.changeVideo}
+                set1Reps={w.set1Reps}
+                set2Reps={w.set2Reps}
+                set3Reps={w.set3Reps}
+                name={w.name}
+                url={w.url}
+              />
+            ))}
           </table>
-
+          <iframe
+            width="560"
+            height="315"
+            src={this.state.url}
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
     );
