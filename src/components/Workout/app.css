@@ -10,7 +10,7 @@
 }
 
 .ui.table {
-  width: 30%;
+  width: 60%;
   margin: 0 auto;
   text-align: center;
 }
@@ -19,3 +19,12 @@
   text-decoration: none;
   color: #333;
 }
+
+.ui.table thead th {
+    background: #99B2DD;
+    color: #F9DEC9
+}
+
+/*.ui.table, .ui.table td, .ui.table tr, .ui.table th {
+    border: 1px solid #99B2DD;
+}*/

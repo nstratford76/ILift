@@ -11,7 +11,8 @@
     color: #333;
   }
 
-  table{
-      margin-left: auto;
-      margin-right: auto;
+  td input {
+    width: 30px;
+    height: 30px;
+    margin-right: 7px;
   }
