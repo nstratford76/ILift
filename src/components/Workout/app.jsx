@@ -2,13 +2,47 @@ import React, { Component } from "react";
 import "./app.css";
 import WorkoutModel from "../WorkoutModel/app";
 
-
 const workoutA = [
-  { id: 1, name: "Incline Bench", set1Reps:"5-6", set2Reps:"6-7", set3Reps:"7-8", url: "https://www.youtube.com/embed/SrqOu55lrYU" },
-  { id: 2, name: "SA DB Bench", set1Reps:"8-10", set2Reps:"10-12", set3Reps:"(optional)", url: "https://www.youtube.com/embed/td-4lC0tXKA" },
-  { id: 3, name: "Incline DB curls", set1Reps:"6-8", set2Reps:"6-8", set3Reps:"6-8", url: "https://www.youtube.com/embed/MVSccftvAQw" },
-  { id: 4, name: "SA Rope Hammer Curls", set1Reps:"8-10", set2Reps:"10-12", set3Reps:"(optional)", url: "https://www.youtube.com/embed/RB7LtfxDB8E" },
-  { id: 5, name: "DB Bent Over Flyes", set1Reps:"12-15", set2Reps:"4-6", set3Reps:"4-6",url: "https://www.youtube.com/embed/ttvfGg9d76c" }
+  {
+    id: 1,
+    name: "Incline Bench",
+    set1Reps: "5-6",
+    set2Reps: "6-7",
+    set3Reps: "7-8",
+    url: "https://www.youtube.com/embed/SrqOu55lrYU",
+  },
+  {
+    id: 2,
+    name: "SA DB Bench",
+    set1Reps: "8-10",
+    set2Reps: "10-12",
+    set3Reps: "(optional)",
+    url: "https://www.youtube.com/embed/td-4lC0tXKA",
+  },
+  {
+    id: 3,
+    name: "Incline DB curls",
+    set1Reps: "6-8",
+    set2Reps: "6-8",
+    set3Reps: "6-8",
+    url: "https://www.youtube.com/embed/MVSccftvAQw",
+  },
+  {
+    id: 4,
+    name: "SA Rope Hammer Curls",
+    set1Reps: "8-10",
+    set2Reps: "10-12",
+    set3Reps: "(optional)",
+    url: "https://www.youtube.com/embed/RB7LtfxDB8E",
+  },
+  {
+    id: 5,
+    name: "DB Bent Over Flyes",
+    set1Reps: "12-15",
+    set2Reps: "4-6",
+    set3Reps: "4-6",
+    url: "https://www.youtube.com/embed/ttvfGg9d76c",
+  },
 ];
 
 const workoutB = [
@@ -19,17 +53,50 @@ const workoutB = [
 ];
 
 const workoutC = [
-  { id: 1, name: "Standing Barbell Press", set1Reps:"6-8", set2Reps:"6-8", set3Reps:"8-10", url: "https://www.youtube.com/embed/2yjwXTZQDDI" },
-  { id: 2, name: "Weighted Chin-ups", set1Reps:"6", set2Reps:"6", set3Reps:"(optional)",url: "https://www.youtube.com/embed/9aA0-FbxK9E" },
-  { id: 3, name: "SA Seated Cable Rows", set1Reps:"8-12", set2Reps:"8-12", set3Reps:"(optional)", url: "https://www.youtube.com/embed/CrylzZHfO1c" },
-  { id: 4, name: "SA Tricep Rope Push-down", set1Reps:"8-10", set2Reps:"10-12", set3Reps:"10-12", url: "https://www.youtube.com/embed/Zl46Cxc4DDs" },
-  { id: 5, name: "DB Lateral Raises", set1Reps:"12-15", set2Reps:"4-6", set3Reps:"4-6", url: "https://www.youtube.com/embed/3VcKaXpzqRo" }
+  {
+    id: 1,
+    name: "Standing Barbell Press",
+    set1Reps: "6-8",
+    set2Reps: "6-8",
+    set3Reps: "8-10",
+    url: "https://www.youtube.com/embed/2yjwXTZQDDI",
+  },
+  {
+    id: 2,
+    name: "Weighted Chin-ups",
+    set1Reps: "6",
+    set2Reps: "6",
+    set3Reps: "(optional)",
+    url: "https://www.youtube.com/embed/9aA0-FbxK9E",
+  },
+  {
+    id: 3,
+    name: "SA Seated Cable Rows",
+    set1Reps: "8-12",
+    set2Reps: "8-12",
+    set3Reps: "(optional)",
+    url: "https://www.youtube.com/embed/CrylzZHfO1c",
+  },
+  {
+    id: 4,
+    name: "SA Tricep Rope Push-down",
+    set1Reps: "8-10",
+    set2Reps: "10-12",
+    set3Reps: "10-12",
+    url: "https://www.youtube.com/embed/Zl46Cxc4DDs",
+  },
+  {
+    id: 5,
+    name: "DB Lateral Raises",
+    set1Reps: "12-15",
+    set2Reps: "4-6",
+    set3Reps: "4-6",
+    url: "https://www.youtube.com/embed/3VcKaXpzqRo",
+  },
 ];
 
 class Workout extends React.Component {
-
-
-  state = {};
+  state = { workouts: "", url: "" };
 
   getWorkout = () => {
     const workout = this.props.current;
@@ -37,16 +104,24 @@ class Workout extends React.Component {
     return workout;
   };
 
+  changeVideo = (newUrl) => {
+    this.setState({ url: newUrl });
+  };
+
   getWorkoutList = () => {
     let workouts = "";
     switch (this.props.current) {
-      case "Workout A": workouts = workoutA;
+      case "Workout A":
+        workouts = workoutA;
         break;
-      case "Workout B": workouts = workoutB;
+      case "Workout B":
+        workouts = workoutB;
         break;
-      case "Workout C": workouts = workoutC;
+      case "Workout C":
+        workouts = workoutC;
         break;
-      default: workouts = workoutA;
+      default:
+        workouts = workoutA;
         break;
     }
     return (
@@ -74,7 +149,7 @@ class Workout extends React.Component {
         </div>
       </div>
     );
-  }
+  };
 
   render() {
     return (
