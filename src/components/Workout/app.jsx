@@ -46,38 +46,10 @@ const workoutA = [
 ];
 
 const workoutB = [
-  {
-    id: 1,
-    name: "Bulgarian Split Squats (per leg)",
-    set1Reps: "6-8",
-    set2Reps: "6-8",
-    set3Reps: "6-8",
-    url: "https://www.youtube.com/embed/2C-uNgKwPLE",
-  },
-  {
-    id: 2,
-    name: "Romanian Deadlifts",
-    set1Reps: "6-8",
-    set2Reps: "6-8",
-    set3Reps: "6-8",
-    url: "https://www.youtube.com/embed/EC-8WL5y3GY",
-  },
-  {
-    id: 3,
-    name: "Leg Extensions",
-    set1Reps: "10-12",
-    set2Reps: "10-12",
-    set3Reps: "10-12",
-    url: "https://www.youtube.com/embed/YyvSfVjQeL0",
-  },
-  {
-    id: 4,
-    name: "Hanging Weighted Knee Raises",
-    set1Reps: "8-15",
-    set2Reps: "8-15",
-    set3Reps: "8-15",
-    url: "https://www.youtube.com/embed/cAM1Tm9w8F4",
-  },
+  { id: 1, name: "Bulgarian Split Squats", set1Reps:"6-8", set2Reps:"6-8", set3Reps:"6-8", url: "https://www.youtube.com/embed/2C-uNgKwPLE" },
+  { id: 2, name: "Romanian Deadlifts", set1Reps:"6-8", set2Reps:"6-8", set3Reps:"6-8",url: "https://www.youtube.com/embed/EC-8WL5y3GY" },
+  { id: 3, name: "Leg Extensions", set1Reps:"10-12", set2Reps:"10-12", set3Reps:"10-12",url: "https://www.youtube.com/embed/YyvSfVjQeL0" },
+  { id: 4, name: "Hanging Weighted Knee Raises", set1Reps:"8-15", set2Reps:"8-15", set3Reps:"8-15",url: "https://www.youtube.com/embed/cAM1Tm9w8F4" }
 ];
 
 const workoutC = [

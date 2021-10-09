@@ -10,10 +10,11 @@
 }
 
 .ui.table {
-  width: 60%;
+  max-width: 1000px;
   margin: 0 auto;
   text-align: center;
 }
+
 .workout span {
   font-size: 1.2em;
   text-decoration: none;
