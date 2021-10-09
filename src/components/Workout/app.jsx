@@ -12,7 +12,7 @@ const workoutA = [
 ];
 
 const workoutB = [
-  { id: 1, name: "Bulgarian Split Squats (per leg)", url: "https://www.youtube.com/watch?v=EC-8WL5y3GY" },
+  { id: 1, name: "Bulgarian Split Squats (per leg)", url: "https://www.youtube.com/embed/2C-uNgKwPLE" },
   { id: 2, name: "Romanian Deadlifts", url: "https://www.youtube.com/embed/EC-8WL5y3GY" },
   { id: 3, name: "Leg Extensions", url: "https://www.youtube.com/embed/YyvSfVjQeL0" },
   { id: 4, name: "Hanging Weighted Knee Raises", url: "https://www.youtube.com/embed/cAM1Tm9w8F4" }
