@@ -1,44 +1,42 @@
 import React from "react";
 import "./app.css";
-import { Dropdown } from "semantic-ui-react";
+import { Menu } from 'semantic-ui-react'
 import Workout from "../Workout/app";
 class Checklist extends React.Component {
-  state = { selectValue: "Workout A" };
-
-  handleChange = (event) => {
-    this.setState({ selectValue: event.target.value });
-  };
-
+  state = {activeItem: 'Workout A'};
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+  
   render() {
+    const { activeItem } = this.state
     return (
-      // <div className="checklist">
-      //   <div
-      //     className="ui three item menu"
-      //   >
-      //     <a className="item active" value="Workout A">
-      //       Workout A
-      //     </a>
-      //     <a className="item" value="Workout B">
-      //       Workout B
-      //     </a>
-      //     <a className="item" value="Workout C">
-      //       Workout C
-      //     </a>
-      //   </div>
-      // </div>
-        <div className="checklist">
-         <select
-          name="dropdown"
-          defaultValue={this.state.selectValue}
-          id="dropdown"
-          onChange={this.handleChange}
+      <div>
+      <Menu widths = {3}>
+        <Menu.Item
+          name='Workout A'
+          active={activeItem === 'Workout A'}
+          onClick={this.handleItemClick}
         >
-          <option value="Workout A">Workout A</option>
-          <option value="Workout B">Workout B</option>
-          <option value="Workout C">Workout C</option>
-        </select> 
-        <Workout current={this.state.selectValue} />
-      </div> 
+          Workout A
+        </Menu.Item>
+        <Menu.Item
+          name='Workout B'
+          active={activeItem === 'Workout B'}
+          onClick={this.handleItemClick}
+        >
+          Workout B
+        </Menu.Item>
+
+        <Menu.Item
+          name='Workout C'
+          active={activeItem === 'Workout C'}
+          onClick={this.handleItemClick}
+        >
+          Workout C
+        </Menu.Item>
+      </Menu>
+      <Workout current = {activeItem}/>
+      </div>
+      
     );
   }
 }
