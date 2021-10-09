@@ -50,19 +50,28 @@ class Workout extends React.Component {
         break;
     }
     return (
-      <div>
-        <table class="ui celled table">
-          <thead>
-            <tr>
-              <th>Movement</th>
-              <th>Sets</th>
-              <th>Weight</th>
-              <th>Example Video</th>
-            </tr>
-          </thead>
-          {workouts.map(w => <WorkoutModel key={w.id} set1Reps={w.set1Reps} set2Reps={w.set2Reps} set3Reps={w.set3Reps} name={w.name} url={w.url} />)}
-        </table>
+      <div className="main-content">
+        <div className="key">
+          <h4>Key</h4>
+          <p>SA = Single Arm</p>
+          <p>DB = Dumbell</p>
+          <p>BW = Body Weight</p>
 
+        </div>
+        <div>
+          <table class="ui celled table">
+            <thead>
+              <tr>
+                <th>Movement</th>
+                <th>Sets</th>
+                <th>Weight</th>
+                <th>Example Video</th>
+              </tr>
+            </thead>
+            {workouts.map(w => <WorkoutModel key={w.id} set1Reps={w.set1Reps} set2Reps={w.set2Reps} set3Reps={w.set3Reps} name={w.name} url={w.url} />)}
+          </table>
+
+        </div>
       </div>
     );
   }

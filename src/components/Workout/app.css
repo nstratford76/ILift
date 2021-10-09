@@ -1,3 +1,15 @@
+.main-content {
+  display: grid;
+  grid-template-columns: 150px auto 150px;
+}
+
+.key {
+  max-width: max-content;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
 .workout {
     font-family: 'Open Sans', sans-serif;
     margin-left: auto;
