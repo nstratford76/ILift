@@ -1,15 +1,6 @@
-.workout {
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #bbb;
-    background-color: #eee;
-  }
-  
-  .workout span {
-    font-size: 1.2em;
-    text-decoration: none;
-    color: #333;
-  }
+.workoutTable {
+  font-family: 'Open Sans', sans-serif;
+}
 
   td input {
     width: 30px;

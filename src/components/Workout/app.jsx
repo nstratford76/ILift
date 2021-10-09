@@ -57,7 +57,7 @@ class Workout extends React.Component {
               <th>Workout</th>
               <th>Reps</th>
               <th>Weight</th>
-              <th>Video Link</th>
+              <th>Example Video</th>
             </tr>
           </thead>
           {workouts.map(w => <WorkoutModel key={w.id} name={w.name} url={w.url} />)}

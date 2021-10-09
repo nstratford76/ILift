@@ -3,7 +3,7 @@ import "./app.css";
 
 function WorkoutModel(props) {
     return (
-        <tbody>
+        <tbody className="workoutTable">
             <tr>
                 <td>{props.name}</td>
                 <td> <input type="text" />Reps </td>

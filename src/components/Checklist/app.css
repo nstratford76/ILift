@@ -5,3 +5,7 @@
 #dropdown {
     margin: 1rem;
 }
+
+.ui.menu .active.item {
+    background: #99B2DD;
+}
