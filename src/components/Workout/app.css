@@ -1,13 +1,20 @@
 .main-content {
   display: grid;
-  grid-template-columns: 150px auto 150px;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .key {
   max-width: max-content;
-  align-content: center;
-  justify-content: center;
-  text-align: center;
+  height: max-content;
+  margin: 10px auto;
+  border: 1px solid #AC3741;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.key h4 {
+  color: #AC3741;
+  border-bottom: 1px solid #AC3741;
 }
 
 .workout {
@@ -22,8 +29,8 @@
 }
 
 .ui.table {
-  max-width: 1000px;
-  margin: 0 auto;
+  max-width: 600px;
+  margin: 20px auto;
   text-align: center;
 }
 
