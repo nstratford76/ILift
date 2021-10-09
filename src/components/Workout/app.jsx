@@ -54,7 +54,7 @@ class Workout extends React.Component {
         <table class="ui celled table">
           <thead>
             <tr>
-              <th>Workout</th>
+              <th>Movement</th>
               <th>Sets</th>
               <th>Weight</th>
               <th>Example Video</th>

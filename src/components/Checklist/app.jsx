@@ -9,7 +9,7 @@ class Checklist extends React.Component {
   render() {
     const { activeItem } = this.state
     return (
-      <div>
+      <div className="checklist">
       <Menu widths = {3}>
         <Menu.Item
           name='Workout A'

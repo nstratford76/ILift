@@ -2,6 +2,11 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+.workoutTable ul {
+  list-style-type: none;
+  margin: 0 auto;
+}
+
   td input {
     width: 30px;
     height: 30px;
