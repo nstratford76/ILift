@@ -23,4 +23,6 @@ td input {
 
 .movementText {
   color: #AC3741;
+  text-decoration: underline;
+  cursor: pointer;
 }
