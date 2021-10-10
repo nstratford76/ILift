@@ -164,6 +164,7 @@ class Workout extends React.Component {
           <table className="ui celled table">
             <thead>
               <tr>
+                <th>Completed</th>
                 <th>Movement</th>
                 <th>Sets</th>
                 <th>Weight</th>
