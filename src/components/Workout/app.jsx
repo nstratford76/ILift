@@ -226,6 +226,10 @@ class Workout extends React.Component {
     }
     return (
       <div className="main-content">
+        <div className="key">
+          <h4>Key</h4>
+          <p>SA = Single Arm | DB = Dumbell | BW = Body Weight</p>
+        </div>
         <table className="ui celled table">
           <thead>
             <tr>
@@ -275,12 +279,7 @@ class Workout extends React.Component {
             ></iframe>
           </div>
         )}
-        <div className="key">
-          <h4>Key</h4>
-          <p>SA = Single Arm</p>
-          <p>DB = Dumbell</p>
-          <p>BW = Body Weight</p>
-        </div>
+        
       </div>
     );
   };
