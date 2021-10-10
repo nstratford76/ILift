@@ -15,8 +15,24 @@
   width: 135px;
 }
 
+.weight {
+  width: 135px;
+}
+
 
 td input {
   width: 30px;
   height: 30px;
+}
+
+.ui.floated.segment, .ui[class*="left floated"].segment {
+  margin: 0 auto;
+  float: none;
+  text-align: center;
+}
+
+.movementText {
+  color: #AC3741;
+  text-decoration: underline;
+  cursor: pointer;
 }

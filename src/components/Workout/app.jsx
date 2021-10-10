@@ -233,6 +233,7 @@ class Workout extends React.Component {
           <table className="ui celled table">
             <thead>
               <tr>
+                <th>Completed</th>
                 <th>Movement</th>
                 <th>Sets</th>
                 <th>Weight</th>
@@ -256,7 +257,7 @@ class Workout extends React.Component {
               />
             ))}
           </table>
-          <iframe
+          {this.state.url && (<iframe
             width="560"
             height="315"
             src={this.state.url}
@@ -264,7 +265,7 @@ class Workout extends React.Component {
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
-          ></iframe>
+          ></iframe>)}
         </div>
       </div>
     );
