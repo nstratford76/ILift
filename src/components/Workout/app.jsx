@@ -181,7 +181,7 @@ class Workout extends React.Component {
               />
             ))}
           </table>
-          <iframe
+          {this.state.url && (<iframe
             width="560"
             height="315"
             src={this.state.url}
@@ -189,7 +189,7 @@ class Workout extends React.Component {
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
-          ></iframe>
+          ></iframe>)}
         </div>
       </div>
     );
