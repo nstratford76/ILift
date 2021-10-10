@@ -194,16 +194,19 @@ class Workout extends React.Component {
 
   updateWeight = (newWeight, workoutType, id) => {
     this.setState({ weight: newWeight });
-    
-    switch(workoutType){
-      case "A": workoutA[id - 1].weight = newWeight;
+
+    switch (workoutType) {
+      case "A":
+        workoutA[id - 1].weight = newWeight;
         break;
-      case "B": workoutB[id - 1].weight = newWeight;
+      case "B":
+        workoutB[id - 1].weight = newWeight;
         break;
-      case "C": workoutC[id - 1].weight = newWeight;
+      case "C":
+        workoutC[id - 1].weight = newWeight;
         break;
     }
-  }
+  };
 
   getWorkoutList = () => {
     let workouts = "";
@@ -235,11 +238,25 @@ class Workout extends React.Component {
           {workouts.map((w) => (
             <WorkoutModel
               key={w.id}
+              id={w.id}
+              workoutType={w.workoutType}
               changeUrl={this.changeVideo}
               set1Reps={w.set1Reps}
               set2Reps={w.set2Reps}
               set3Reps={w.set3Reps}
+              set2Weight={
+                Math.round(
+                  Math.round(parseFloat(w.set2Weight * w.weight)) / 5
+                ) * 5
+              }
+              set3Weight={
+                Math.round(
+                  Math.round(parseFloat(w.set3Weight * w.weight)) / 5
+                ) * 5
+              }
+              updateWeight={this.updateWeight}
               name={w.name}
+              weight={w.weight}
               url={w.url}
             />
           ))}
@@ -264,52 +281,12 @@ class Workout extends React.Component {
           <p>DB = Dumbell</p>
           <p>BW = Body Weight</p>
         </div>
-        <div>
-          <table className="ui celled table">
-            <thead>
-              <tr>
-                <th>Completed</th>
-                <th>Movement</th>
-                <th>Sets</th>
-                <th>Weight</th>
-              </tr>
-            </thead>
-            {workouts.map((w) => (
-              <WorkoutModel
-                key={w.id}
-                id={w.id}
-                workoutType={w.workoutType}
-                changeUrl={this.changeVideo}
-                set1Reps={w.set1Reps}
-                set2Reps={w.set2Reps}
-                set3Reps={w.set3Reps}
-                set2Weight={Math.round(Math.round(parseFloat(w.set2Weight * w.weight))/5) * 5}
-                set3Weight={Math.round(Math.round(parseFloat(w.set3Weight * w.weight))/5) * 5}
-                updateWeight={this.updateWeight}
-                name={w.name}
-                weight={w.weight}
-                url={w.url}
-              />
-            ))}
-          </table>
-          {this.state.url && (<iframe
-            width="560"
-            height="315"
-            src={this.state.url}
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>)}
-        </div>
       </div>
     );
   };
 
   render() {
-    return (
-      <div>{this.getWorkoutList()}</div>
-    );
+    return <div>{this.getWorkoutList()}</div>;
   }
 }
 export default Workout;
