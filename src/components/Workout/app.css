@@ -65,8 +65,8 @@
   margin-right: auto;
 }
 
-.video h1 {
-  
+.ui.floated.segment, .ui[class*="left floated"].segment {
+  transform: translateY(40%);
 }
 
 /*.ui.table, .ui.table td, .ui.table tr, .ui.table th {
