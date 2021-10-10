@@ -2,129 +2,185 @@ import React, { Component } from "react";
 import "./app.css";
 import WorkoutModel from "../WorkoutModel/app";
 
-const workoutA = [
+let workoutA = [
   {
+    workoutType: "A",
     id: 1,
     name: "Incline Bench",
     set1Reps: "5-6",
     set2Reps: "6-7",
     set3Reps: "7-8",
     url: "https://www.youtube.com/embed/SrqOu55lrYU",
+    weight: 0,
+    set2Weight: 0.9,
+    set3Weight: 0.9 * 0.9,
   },
   {
+    workoutType: "A",
     id: 2,
     name: "SA DB Bench",
     set1Reps: "8-10",
     set2Reps: "10-12",
     set3Reps: "(optional)",
     url: "https://www.youtube.com/embed/td-4lC0tXKA",
+    weight: 0,
+    set2Weight: 0.9,
+    set3Weight: 0.9 * 0.9,
   },
   {
+    workoutType: "A",
     id: 3,
     name: "Incline DB curls",
     set1Reps: "6-8",
     set2Reps: "6-8",
     set3Reps: "6-8",
     url: "https://www.youtube.com/embed/MVSccftvAQw",
+    weight: 0,
+    set2Weight: 0.9,
+    set3Weight: 0.9 * 0.9,
   },
   {
+    workoutType: "A",
     id: 4,
     name: "SA Rope Hammer Curls",
     set1Reps: "8-10",
     set2Reps: "10-12",
     set3Reps: "(optional)",
     url: "https://www.youtube.com/embed/RB7LtfxDB8E",
+    weight: 0,
+    set2Weight: 0.9,
+    set3Weight: 0.9 * 0.9,
   },
   {
+    workoutType: "A",
     id: 5,
     name: "DB Bent Over Flyes",
     set1Reps: "12-15",
     set2Reps: "4-6",
     set3Reps: "4-6",
     url: "https://www.youtube.com/embed/ttvfGg9d76c",
+    weight: 0,
+    set2Weight: 0.9,
+    set3Weight: 0.9 * 0.9,
   },
 ];
 
-const workoutB = [
+let workoutB = [
   {
+    workoutType: "B",
     id: 1,
     name: "Bulgarian Split Squats",
     set1Reps: "6-8",
     set2Reps: "6-8",
     set3Reps: "6-8",
     url: "https://www.youtube.com/embed/2C-uNgKwPLE",
+    weight: 0,
+    set2Weight: 0.8,
+    set3Weight: 0.8 * 0.8,
   },
   {
+    workoutType: "B",
     id: 2,
     name: "Romanian Deadlifts",
     set1Reps: "6-8",
     set2Reps: "6-8",
     set3Reps: "6-8",
     url: "https://www.youtube.com/embed/EC-8WL5y3GY",
+    weight: 0,
+    set2Weight: 0.9,
+    set3Weight: 0.9 * 0.9,
   },
   {
+    workoutType: "B",
     id: 3,
     name: "Leg Extensions",
     set1Reps: "10-12",
     set2Reps: "10-12",
     set3Reps: "10-12",
     url: "https://www.youtube.com/embed/YyvSfVjQeL0",
+    weight: 0,
+    set2Weight: 0.9,
+    set3Weight: 0.9 * 0.9,
   },
   {
+    workoutType: "B",
     id: 4,
     name: "Hanging Weighted Knee Raises",
     set1Reps: "8-15",
     set2Reps: "8-15",
     set3Reps: "8-15",
     url: "https://www.youtube.com/embed/cAM1Tm9w8F4",
+    weight: 0,
+    set2Weight: 0.9,
+    set3Weight: 0.9 * 0.9,
   },
 ];
 
-const workoutC = [
+let workoutC = [
   {
+    workoutType: "C",
     id: 1,
     name: "Standing Barbell Press",
     set1Reps: "6-8",
     set2Reps: "6-8",
     set3Reps: "8-10",
     url: "https://www.youtube.com/embed/2yjwXTZQDDI",
+    weight: 0,
+    set2Weight: 0.9,
+    set3Weight: 0.9 * 0.9,
   },
   {
+    workoutType: "C",
     id: 2,
     name: "Weighted Chin-ups",
     set1Reps: "6",
     set2Reps: "6",
     set3Reps: "(optional)",
     url: "https://www.youtube.com/embed/9aA0-FbxK9E",
+    weight: 0,
+    set2Weight: 0.8,
+    set3Weight: 0.8 * 0.8,
   },
   {
+    workoutType: "C",
     id: 3,
     name: "SA Seated Cable Rows",
     set1Reps: "8-12",
     set2Reps: "8-12",
     set3Reps: "(optional)",
     url: "https://www.youtube.com/embed/CrylzZHfO1c",
+    weight: 0,
+    set2Weight: 0.9,
+    set3Weight: 0.9 * 0.9,
   },
   {
+    workoutType: "C",
     id: 4,
     name: "SA Tricep Rope Push-down",
     set1Reps: "8-10",
     set2Reps: "10-12",
     set3Reps: "10-12",
     url: "https://www.youtube.com/embed/Zl46Cxc4DDs",
+    weight: 0,
+    set2Weight: 0.9,
+    set3Weight: 0.9 * 0.9,
   },
   {
+    workoutType: "C",
     id: 5,
     name: "DB Lateral Raises",
     set1Reps: "12-15",
     set2Reps: "4-6",
     set3Reps: "4-6",
     url: "https://www.youtube.com/embed/3VcKaXpzqRo",
+    weight: 0,
+    set2Weight: 0.9,
+    set3Weight: 0.9 * 0.9,
   },
 ];
 
 class Workout extends React.Component {
-  state = { workouts: "", url: "" };
+  state = { workouts: "", url: "", weight: "" };
 
   getWorkout = () => {
     const workout = this.props.current;
@@ -135,6 +191,19 @@ class Workout extends React.Component {
   changeVideo = (newUrl) => {
     this.setState({ url: newUrl });
   };
+
+  updateWeight = (newWeight, workoutType, id) => {
+    this.setState({ weight: newWeight });
+    
+    switch(workoutType){
+      case "A": workoutA[id - 1].weight = newWeight;
+        break;
+      case "B": workoutB[id - 1].weight = newWeight;
+        break;
+      case "C": workoutC[id - 1].weight = newWeight;
+        break;
+    }
+  }
 
   getWorkoutList = () => {
     let workouts = "";
@@ -172,11 +241,17 @@ class Workout extends React.Component {
             {workouts.map((w) => (
               <WorkoutModel
                 key={w.id}
+                id={w.id}
+                workoutType={w.workoutType}
                 changeUrl={this.changeVideo}
                 set1Reps={w.set1Reps}
                 set2Reps={w.set2Reps}
                 set3Reps={w.set3Reps}
+                set2Weight={Math.round(Math.round(parseFloat(w.set2Weight * w.weight))/5) * 5}
+                set3Weight={Math.round(Math.round(parseFloat(w.set3Weight * w.weight))/5) * 5}
+                updateWeight={this.updateWeight}
                 name={w.name}
+                weight={w.weight}
                 url={w.url}
               />
             ))}
@@ -198,35 +273,6 @@ class Workout extends React.Component {
   render() {
     return (
       <div>{this.getWorkoutList()}</div>
-
-      //   <div className="workout">
-      //     <table class="ui celled table">
-      //       <thead>
-      //         <tr>
-      //           <th>{this.getWorkout()}</th>
-      //           <th>Age</th>
-      //           <th>Job</th>
-      //         </tr>
-      //       </thead>
-      //       <tbody>
-      //         <tr>
-      //           <td data-label="Name">James</td>
-      //           <td data-label="Age">24</td>
-      //           <td data-label="Job">Engineer</td>
-      //         </tr>
-      //         <tr>
-      //           <td data-label="Name">Jill</td>
-      //           <td data-label="Age">26</td>
-      //           <td data-label="Job">Engineer</td>
-      //         </tr>
-      //         <tr>
-      //           <td data-label="Name">Elyse</td>
-      //           <td data-label="Age">24</td>
-      //           <td data-label="Job">Designer</td>
-      //         </tr>
-      //       </tbody>
-      //     </table>
-      //   </div>
     );
   }
 }
