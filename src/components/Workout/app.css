@@ -1,6 +1,7 @@
 .main-content {
-  display: grid;
-  grid-template-columns: 1fr 560px 1fr;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  display: inline;
 }
 
 .key {
@@ -29,8 +30,10 @@
 }
 
 .ui.table {
+  display: inline-block;
   max-width: 600px;
-  margin: 20px auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 
@@ -44,8 +47,26 @@
     background: #F9DEC9;
 }
 
-iframe {
+/* iframe {
+  display:inline-block;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-left: 100px;
+  margin-right: auto;
+  margin-bottom: 200px;
+} */
+
+.container {
+  display: inline;
+}
+.video {
+  vertical-align: top;
+  display: inline-block;
+  margin-left: 100px;
+  margin-right: auto;
+}
+
+.video h1 {
+  
 }
 
 /*.ui.table, .ui.table td, .ui.table tr, .ui.table th {

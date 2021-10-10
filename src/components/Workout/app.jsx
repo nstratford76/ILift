@@ -180,7 +180,7 @@ let workoutC = [
 ];
 
 class Workout extends React.Component {
-  state = { workouts: "", url: "", weight: "" };
+  state = { name: "", url: "", weight: "" };
 
   getWorkout = () => {
     const workout = this.props.current;
@@ -188,8 +188,8 @@ class Workout extends React.Component {
     return workout;
   };
 
-  changeVideo = (newUrl) => {
-    this.setState({ url: newUrl });
+  changeVideo = (newUrl, newName) => {
+    this.setState({ name: newName, url: newUrl });
   };
 
   updateWeight = (newWeight, workoutType, id) => {
@@ -223,6 +223,41 @@ class Workout extends React.Component {
     }
     return (
       <div className="main-content">
+        <table className="ui celled table">
+          <thead>
+            <tr>
+              <th>Completed</th>
+              <th>Movement</th>
+              <th>Sets</th>
+              <th>Weight</th>
+            </tr>
+          </thead>
+          {workouts.map((w) => (
+            <WorkoutModel
+              key={w.id}
+              changeUrl={this.changeVideo}
+              set1Reps={w.set1Reps}
+              set2Reps={w.set2Reps}
+              set3Reps={w.set3Reps}
+              name={w.name}
+              url={w.url}
+            />
+          ))}
+        </table>
+        {this.state.url && (
+          <div className="video">
+            <h1>{this.state.name}</h1>
+            <iframe
+              width="560"
+              height="315"
+              src={this.state.url}
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        )}
         <div className="key">
           <h4>Key</h4>
           <p>SA = Single Arm</p>
